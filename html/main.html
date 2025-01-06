@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer - By Lishanth Soundararajan</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <h1>Sorting Visualizer - By Lishanth Soundararajan</h1>
+    <div class="Cont-Tv">
+        <!-- This div contains Container and TV -->
+        <div class="container">
+            <div class="sidebar">
+                <label for="selectAlgorithm">Choose Sorting Algorithm</label>
+                <select id="selectAlgorithm" aria-label="Sorting algorithm selector">
+                    <option value="bubbleSort">Bubble Sort</option>
+                    <option value="selectionSort">Selection Sort</option>
+                    <option value="quickSort">Quick Sort</option>
+                </select>
+                <div class="generate-new">
+                    <p>Generate new array</p>
+                    <input type="number" id="numbersBars" min="1" max="20" value="10" aria-label="Number of bars to generate">
+                    <button id="generateBtn" aria-label="Generate new bars">Generate</button>
+                </div>
+                <div class="buttons">
+                    <button id="solveBtn" aria-label="Sort the array">Sort pannu!</button>
+                </div>
+            </div>
+            <div class="stage" id="stage"></div>
+        </div>
+        <div class="Tv">
+            <label for="property">View Properties & Analyse</label>
+            <select id="property" aria-label="sort property selector">
+                <option value="Analyse">Analyse All</option>
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="quick">Quick Sort</option>        
+            </select>
+            <div class="TV-Screen">
+                <img id="analyseImg" src="../img/Screenshot 2024-12-15 135040.png" alt="comp" style="display: none;"/>
+                <img id="analyseImg2" src="../img/comparison-of-sorting-algorithms-compare1-18082c14f960abf3.png" alt="table" style="display: none;"/>
+                <img id="analyseImg3" src="../img/Screenshot--610-.png" alt="graph" style="display: none;"/>
+                <img id="qcode" src="../img/quick code.png" style="display: none;"/>
+                <img id="qpic" src="../img/Quick_sort_algorithm.png" style="display: none;"/>
+                <img id="selpic" src="../img/selection-sort.png" alt="graph" style="display: none;"/>
+                <img id="selcode" src="../img/sel code.png" alt="graph" style="display: none;"/>
+                <img id="bubpic" src="../img/bubble 1.png" alt="graph" style="display: none;"/>
+                <img id="bubcode" src="../img/code bubble.png" alt="graph" style="display: none;"/>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/index.js"></script>
+    <script>
+        // JavaScript to handle image visibility based on dropdown selection
+        document.getElementById('property').addEventListener('change', function () {
+            const selectedValue = this.value;
+            console.log("Selected Algorithm: " + selectedValue); // Debugging line
+
+            // Hide all images initially
+            const allImages = document.querySelectorAll('.TV-Screen img');
+            allImages.forEach(img => img.style.display = 'none');
+     
+            // Show the relevant images based on the selected value
+            if (selectedValue === 'Analyse') {
+                document.getElementById('analyseImg').style.display = 'block';
+                document.getElementById('analyseImg2').style.display = 'block';
+                document.getElementById('analyseImg3').style.display = 'block';
+                console.log("Displaying all analysis images");
+            } else if (selectedValue === 'bubble') {
+                document.getElementById('bubpic').style.display = 'block';
+                document.getElementById('bubcode').style.display = 'block';
+                console.log("Displaying Bubble Sort images");
+            } else if (selectedValue === 'selection') {
+                document.getElementById('selpic').style.display = 'block';
+                document.getElementById('selcode').style.display = 'block';
+                console.log("Displaying Selection Sort images");
+            } else if (selectedValue === 'quick') {
+                document.getElementById('qcode').style.display = 'block';
+                document.getElementById('qpic').style.display = 'block';
+                console.log("Displaying Quick Sort images");
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+

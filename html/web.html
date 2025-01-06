@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../css/web.css">
+    <style>
+        /* Initially hide the project description */
+        #project-description {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Black Bar at the top -->
+    <div id="navbar">
+        <div id="logo">SENSORS DATA MANAGEMENT</div>
+        <div id="menu">
+            <button id="home-button">HOME</button>
+            <button>TRIAL</button>
+            <a href ="sign-up.html">
+                <button>Sign-in</button>
+            </a>
+            <a href ="login.html">
+                <button>log-in</button>
+            </a>
+        </div>
+    </div>
+
+    <div id="mid">
+        <img src="../image/th (2).jpeg" alt="Image">
+        <div id="search-container">
+            <button id="search-button">Search Available Sensors</button>
+        </div>
+    
+        <!-- Sensor List Section -->
+        <div id="sensor-list-container"></div>
+    </div>
+
+    <!-- Project Description Section -->
+    <div id="project-description">
+        <h2>Project Description</h2>
+        <img src="c:\Users\Lishanth\Downloads\th (3).jpeg" alt="img iot">
+        <div id="disc-mid">
+        <p><strong>Sensor Data Management System</strong></p>
+        <p>This project involves the development of a Sensor Data Management Website using HTML, CSS, and JavaScript, with the integration of Internet of Things (IoT) technology for real-time data collection and performance analysis of various sensors. The goal is to create a platform that can collect, analyze, store, and visualize data from multiple sensors, providing valuable insights into sensor performance and usage.</p>
+        
+        <p><strong>Key Features:</strong></p>
+        
+        <p><strong>Sensor Data Collection:</strong></p>
+        <p>The website will support five different types of sensors (e.g., Temperature Sensor, Humidity Sensor, Pressure Sensor, Light Sensor, and Gas Sensor) that collect data in real-time. These sensors are connected via IoT technology, ensuring continuous and remote data transmission.</p>
+        
+        <p><strong>Data Storage and Management:</strong></p>
+        <p>Data from each sensor will be stored in a database, ensuring that the information is available for analysis at any time. The database will manage the incoming data and facilitate queries to retrieve specific data points for analysis.</p>
+        
+        <p><strong>Performance Analysis:</strong></p>
+        <p>The system will analyze the performance of each sensor, identifying patterns, anomalies, or trends in the collected data. This analysis will help in understanding sensor behavior over time and optimizing sensor usage.</p>
+        
+        <p><strong>Visualization:</strong></p>
+        <p>The website will provide an intuitive interface to visualize sensor data and performance using graphs and charts. Data will be displayed dynamically, offering real-time updates on sensor performance and statistics.</p>
+        
+        <p><strong>User Interface:</strong></p>
+        <p>The website will have a clean, user-friendly interface built using HTML and CSS. JavaScript will be used to handle the dynamic data display and interaction on the website, ensuring a smooth user experience.</p>
+        
+        <p><strong>IoT Integration:</strong></p>
+        <p>The system will incorporate IoT technologies to ensure seamless communication between sensors and the website, enabling the collection of data from sensors that are remotely located.</p>
+        
+        <p><strong>Technologies Used:</strong></p>
+        </div>
+        <ul>
+            <li><strong>HTML:</strong> For structuring the webpage and creating the layout.</li>
+            <li><strong>CSS:</strong> For styling the webpage and making it visually appealing and responsive.</li>
+            <li><strong>JavaScript:</strong> For dynamic content handling, data interaction, and visualization.</li>
+            <li><strong>IoT:</strong> To collect data from physical sensors connected to the system.</li>
+        </ul>
+        
+        <p><strong>Conclusion:</strong></p>
+        <p>This project aims to provide a comprehensive solution for real-time monitoring, data collection, analysis, and visualization of sensor data. It leverages IoT technology to gather and present the data effectively, making it a valuable tool for sensor management, performance monitoring, and decision-making.</p>
+    </div>
+
+    <script>
+        // Show the project description when the HOME button is clicked
+        document.getElementById('home-button').addEventListener('click', function() {
+            const projectDescription = document.getElementById('project-description');
+            const navbar = document.getElementById('navbar');
+            const midSection = document.getElementById('mid');
+            const footer = document.getElementById('footer');
+
+            // Hide the other sections and show the project description
+            midSection.style.display = 'none';
+            projectDescription.style.display = 'block'; // Make it visible
+        });
+
+        // Display the sensor list when the "Search Available Sensors" button is clicked
+        document.getElementById('search-button').addEventListener('click', function() {
+            // Predefined list of sensor names
+            const sensors = [
+                "Temperature Sensor",
+                "Humidity Sensor",
+                "Pressure Sensor",
+                "Light Sensor",
+                "Gas Sensor"
+            ];
+
+            // Get the sensor list container
+            const sensorListContainer = document.getElementById('sensor-list-container');
+            
+            // Clear any existing list
+            sensorListContainer.innerHTML = '';
+
+            // Create a list (ul)
+            const ul = document.createElement('ul');
+            
+            // Add each sensor name to the list
+            sensors.forEach(function(sensor) {
+                const li = document.createElement('li');
+                li.textContent = sensor;
+                ul.appendChild(li);
+            });
+            
+            // Append the list to the sensor list container
+            sensorListContainer.appendChild(ul);
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div id="footer-mid">
+            <p>Email: lish@gmail.com</p>
+            <p>Phone: 7695XX5217</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+

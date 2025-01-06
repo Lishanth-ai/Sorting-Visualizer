@@ -1,0 +1,154 @@
+/* Navbar Style */
+#navbar {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#logo {
+    font-size: 34px;
+    background-color: white;
+    color: rgb(83, 197, 212);
+}
+
+#menu button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#menu button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Image Section */
+#mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px); /* Fill the remaining height */
+    text-align: center;
+}
+
+#mid img {
+    width: 410px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image scales nicely */
+}
+
+/* Basic Styles for the Search Bar */
+#search-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#search-bar {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#search-button:hover {
+    background-color: #555;
+}
+
+/* Styling the Sensor List */
+#sensor-list-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+    padding: 5px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background-color: #ddd;
+}
+
+/* Footer Style */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
+#footer-mid {
+    color: white;
+    font-size: 18px;
+}
+#project-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Fill the entire viewport height */
+    text-align: center; /* Center the text horizontally */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#project-description h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#disc-mid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#project-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px; /* Optional: limit width for readability */
+    word-wrap: break-word;
+}
+
+
+
+
+
+
+
+
+
+

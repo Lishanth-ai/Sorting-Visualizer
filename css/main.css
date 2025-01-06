@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: fantasy;
+    background-color: #6A0136; /* Deep purple background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+    color: #fff; /* White text color */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #BFAB25; /* Golden yellow text for the title */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+p{
+    font-size: 25px;
+}
+
+.Cont-Tv {
+    display: flex; /* Enables flex layout for alignment */
+    justify-content: space-between; /* Space between container and Tv */
+    align-items: stretch; /* Ensures both elements align properly vertically */
+    width: 100%;
+    height: 80vh; /* Same height as specified */
+}
+
+.container {
+    flex: 3.25; /* Adjusts width relative to Tv */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Tv {
+    flex: 0.75; /* Takes up 1/4th the width of the container */
+    background-color: #353535; /* Dark background for the TV */
+    border: 2px solid #CEA0AE;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white; /* Text color for any content inside */
+    padding: 0px;
+    flex-direction: column;
+}
+.TV-Sreen{
+    height: 80%;
+    width: 100%;
+}
+
+
+/* Sidebar styling */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+label {
+    position: relative;
+    top: 2%;
+}
+
+.generate-new {
+    position: relative;
+    height: 50vh;
+    align-content: center;
+}
+
+button#solveBtn {
+    font-size: 25px;
+    width: 100%;
+    font-family: cursive;
+    font-weight: 900;
+    color: whitesmoke;
+    background-color: darkkhaki;
+}
+
+button#solveBtn:hover {
+    background-color: #6A0136;
+}
+
+.sidebar select,
+.sidebar input,
+.sidebar button {
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #CEA0AE;
+    background-color: #6A0136; /* Deep purple background */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.Tv select,
+.Tv input,
+.Tv button {
+    padding: 12px;
+    margin: 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #CEA0AE;
+    background-color: #6A0136; /* Deep purple background */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.Tv select:hover,
+.Tv input:hover,
+.Tv button:hover {
+    background-color: #CEA0AE; /* Soft pink on hover */
+}
+img#analyseImg3 {
+    height: 37%;
+}
+img#bubcode {
+    height: 60%;
+}
+.TV-Screen img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+}
+
+/* Zoom in when hovered */
+.TV-Screen img:hover {
+    transform: scale(1.2); /* Increase the size by 20% */
+    cursor: pointer; /* Change cursor to indicate zoom */
+}
+
+.generate-new {
+    position: relative;
+    height: 46vh;
+    align-content: center;
+}
+
+.sidebar select:hover,
+.sidebar input:hover,
+.sidebar button:hover {
+    background-color: #CEA0AE; /* Soft pink on hover */
+}
+
+.sidebar button:disabled {
+    cursor: not-allowed;
+    background-color: #ddd;
+}
+h1{
+    font-family: fantasy;
+}
+/* Styling for the stage (sorting area) */
+#stage {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: 80vh; /* Make the sorting area take up 80% of the screen */
+    background-color: #353535; /* Dark background for sorting area */
+    border: 2px solid #CEA0AE;
+    border-radius: 8px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+/* Styling for the bars */
+.bar {
+    width: 40px;
+    margin: 5px 0;
+    background-color: #6552D0; /* Deep purple bars */
+    border-radius: 8px;
+    transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for the bars */
+.bar:hover {
+    background-color: #CEA0AE; /* Soft pink on hover */
+}
+
+/* Controls section styling */
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+button, select, input {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #CEA0AE;
+    background-color: #6A0136;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, select:hover, input:hover {
+    background-color: #BFAB25;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #ddd;
+}
+img{
+    height: 32%;
+    width: 100%;
+    border: 10px   #BFAB25  solid;
+}
+select {
+    padding: 10px;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+input[type="range"] {
+    width: 250px;
+}
+
+#algorithmLabel {
+    font-size: 18px;
+    color: #CEA0AE;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#controls .row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer {
+    margin-top: 20px;
+    color: #CEA0AE;
+    font-size: 14px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 80%; /* Make the sidebar width smaller on mobile */
+        padding: 10px;
+    }
+
+    #stage {
+        height: 60vh;
+    }
+
+    button, select, input {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    input[type="range"] {
+        width: 200px;
+    }
+
+    .bar {
+        width: 40px;
+        margin: 3px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
